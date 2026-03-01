@@ -125,11 +125,13 @@
 
                     <!-- Row 4 -->
                     <div class="form-group">
-                        <label for="designType">نوع التصميم المطلوب</label>
+                        <label for="designType">��وع التصميم المطلوب</label>
                         <select id="designType" name="designType" required>
                             <option value="">اختر نوع التصميم</option>
-                            <option value="2D">مخططات 2D</option>
-                            <option value="3D">تصميم كامل 3D</option>
+                            <option value="فندقي">فندقي</option>
+                            <option value="مودرن">مودرن</option>
+                            <option value="ستيل">ستيل</option>
+                            <option value="كلاسيك">كلاسيك</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -138,10 +140,21 @@
                             <option value="">اختر نوع الأرضيات</option>
                             <option value="بورسلين">بورسلين</option>
                             <option value="سيراميك">سيراميك</option>
+                            <option value="HDF">HDF</option>
                         </select>
                     </div>
 
                     <!-- Row 5 -->
+                    <div class="form-group full">
+                        <label for="designs-available">هل متوافر مع العميل تصميمات 2D أو 3D؟</label>
+                        <select id="designs-available" name="designsAvailable" required>
+                            <option value="">اختر الخيار</option>
+                            <option value="نعم">نعم</option>
+                            <option value="لا">لا</option>
+                        </select>
+                    </div>
+
+                    <!-- Row 6 -->
                     <div class="form-group">
                         <label for="electricity">تأسيس الكهرباء</label>
                         <select id="electricity" name="electricity" required>
@@ -159,11 +172,11 @@
                         </select>
                     </div>
 
-                    <!-- Row 6 -->
+                    <!-- Row 7 -->
                     <div class="form-group full">
                         <label for="customer-location">مكان إقامة العميل الحالي</label>
                         <select id="customer-location" name="clientLocation" required>
-                            <option value="">هل أنت متواجد داخل مصر؟</option>
+                            <option value="">اختر مكان الإقامة</option>
                             <option value="داخل مصر">داخل مصر</option>
                             <option value="خارج مصر">خارج مصر</option>
                         </select>
@@ -178,7 +191,42 @@
                 <h2 class="section-title">جزء من تصميماتنا الحديثة</h2>
                 <div class="portfolio-wrapper">
                     <div class="portfolio-scroll" id="portfolioGrid">
-                        <!-- سيتم ملء هنا من JavaScript -->
+                        <div class="portfolio-item">
+                            <img src="images/portfolio1.jpg" alt="تصميم حديث 1">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio2.jpg" alt="تصميم حديث 2">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio3.jpg" alt="تصميم حديث 3">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio4.jpg" alt="تصميم حديث 4">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio5.jpg" alt="تصميم حديث 5">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio6.jpg" alt="تصميم حديث 6">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio7.jpg" alt="تصميم حديث 7">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio8.jpg" alt="تصميم حديث 8">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio9.jpg" alt="تصميم حديث 9">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio10.jpg" alt="تصميم حديث 10">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio11.jpg" alt="تصميم حديث 11">
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="images/portfolio12.jpg" alt="تصميم حديث 12">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -188,7 +236,21 @@
                 <div class="testimonials-container">
                     <h2 class="section-title">آراء عملائنا</h2>
                     <div class="testimonials-slider" id="testimonialsSlider">
-                        <!-- سيتم ملء هنا من JavaScript -->
+                        <div class="testimonial-item">
+                            <img src="images/images_testimonials/1.jpg" alt="عميل 1">
+                        </div>
+                        <div class="testimonial-item">
+                            <img src="images/images_testimonials/2.jpg" alt="عميل 2">
+                        </div>
+                        <div class="testimonial-item">
+                            <img src="images/images_testimonials/3.jpg" alt="عميل 3">
+                        </div>
+                        <div class="testimonial-item">
+                            <img src="images/images_testimonials/4.jpg" alt="عميل 4">
+                        </div>
+                        <div class="testimonial-item">
+                            <img src="images/images_testimonials/5.jpg" alt="عميل 5">
+                        </div>
                     </div>
                     <div class="testimonials-link">
                         <a href="portfolio.pdf" download>📄 شاهد ملف الأعمال الكامل (PDF)</a>
@@ -211,7 +273,7 @@
                 </div>
 
                 <div class="category-gallery" id="categoryGallery">
-                    <!-- Gallery items will be populated by JavaScript -->
+                    <!-- سيتم ملء الصور هنا من JavaScript -->
                 </div>
             </section>
         </main>
