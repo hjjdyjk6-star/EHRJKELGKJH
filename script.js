@@ -1,7 +1,7 @@
 // بيانات الصور لكل فئة - 10 صور لكل فئة
 const categoryImages = {
     'reception': [
-        'images/images_reception/1.jpg',
+        'images/portfolio8.jpg',
         'images/images_reception/2.jpg',
         'images/images_reception/3.jpg',
         'images/images_reception/4.jpg',
