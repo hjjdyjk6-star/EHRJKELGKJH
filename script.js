@@ -1,28 +1,28 @@
 // بيانات الصور لكل فئة - 10 صور لكل فئة
 const categoryImages = {
     'reception': [
-        'images/portfolio8.jpg',
-        'images/images_reception/2.jpg',
-        'images/images_reception/3.jpg',
-        'images/images_reception/4.jpg',
-        'images/images_reception/5.jpg',
-        'images/images_reception/6.jpg',
-        'images/images_reception/7.jpg',
-        'images/images_reception/8.jpg',
-        'images/images_reception/9.jpg',
-        'images/images_reception/10.jpg'
+        'images/reception1.jpg',
+        'images/reception2.jpg',
+        'images/reception3.jpg',
+        'images/reception4.jpg',
+        'images/reception5.jpg',
+        'images/reception6.jpg',
+        'images/reception7.jpg',
+        'images/reception8.jpg',
+        'images/reception9.jpg',
+        'images/reception10.jpg'
     ],
     'master-bedroom': [
-        'images/images_master_bedroom/1.jpg',
-        'images/images_master_bedroom/2.jpg',
-        'images/images_master_bedroom/3.jpg',
-        'images/images_master_bedroom/4.jpg',
-        'images/images_master_bedroom/5.jpg',
-        'images/images_master_bedroom/6.jpg',
-        'images/images_master_bedroom/7.jpg',
-        'images/images_master_bedroom/8.jpg',
-        'images/images_master_bedroom/9.jpg',
-        'images/images_master_bedroom/10.jpg'
+        'images/master1.jpg',
+        'images/master2.jpg',
+        'images/master3.jpg',
+        'images/master4.jpg',
+        'images/master5.jpg',
+        'images/master6.jpg',
+        'images/master7.jpg',
+        'images/master8.jpg',
+        'images/master9.jpg',
+        'images/master10.jpg'
     ],
     'boys-room': [
         'images/images_boys_room/1.jpg',
@@ -49,28 +49,28 @@ const categoryImages = {
         'images/images_girls_room/10.jpg'
     ],
     'small-bathroom': [
-        'images/images_small_bathroom/1.jpg',
-        'images/images_small_bathroom/2.jpg',
-        'images/images_small_bathroom/3.jpg',
-        'images/images_small_bathroom/4.jpg',
-        'images/images_small_bathroom/5.jpg',
-        'images/images_small_bathroom/6.jpg',
-        'images/images_small_bathroom/7.jpg',
-        'images/images_small_bathroom/8.jpg',
-        'images/images_small_bathroom/9.jpg',
-        'images/images_small_bathroom/10.jpg'
+        'images/small1.jpg',
+        'images/small2.jpg',
+        'images/small3.jpg',
+        'images/small4.jpg',
+        'images/small5.jpg',
+        'images/small6.jpg',
+        'images/small7.jpg',
+        'images/small8.jpg',
+        'images/small9.jpg',
+        'images/small10.jpg'
     ],
     'large-bathroom': [
-        'images/images_large_bathroom/1.jpg',
-        'images/images_large_bathroom/2.jpg',
-        'images/images_large_bathroom/3.jpg',
-        'images/images_large_bathroom/4.jpg',
-        'images/images_large_bathroom/5.jpg',
-        'images/images_large_bathroom/6.jpg',
-        'images/images_large_bathroom/7.jpg',
-        'images/images_large_bathroom/8.jpg',
-        'images/images_large_bathroom/9.jpg',
-        'images/images_large_bathroom/10.jpg'
+        'images/large1.jpg',
+        'images/large2.jpg',
+        'images/large3.jpg',
+        'images/large4.jpg',
+        'images/large5.jpg',
+        'images/large6.jpg',
+        'images/large7.jpg',
+        'images/large8.jpg',
+        'images/large9.jpg',
+        'images/large10.jpg'
     ],
     'kitchen': [
         'images/images_kitchen/1.jpg',
