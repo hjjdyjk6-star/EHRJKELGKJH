@@ -511,7 +511,7 @@ header {
 }
 
 .testimonial-item {
-    flex: 0 0 350px;
+    flex: 0 0 300px;
     aspect-ratio: 1;
     border-radius: 15px;
     overflow: hidden;
