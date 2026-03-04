@@ -61,16 +61,13 @@ const categoryImages = {
         'images/small10.jpg'
     ],
     'large-bathroom': [
-        'images/large1.jpg',
-        'images/large2.jpg',
-        'images/large3.jpg',
-        'images/large4.jpg',
-        'images/large5.jpg',
-        'images/large6.jpg',
-        'images/large7.jpg',
-        'images/large8.jpg',
-        'images/large9.jpg',
-        'images/large10.jpg'
+        'images/big1.jpg',
+        'images/big2.jpg',
+        'images/big3.jpg',
+        'images/big4.jpg',
+        'images/big5.jpg',
+        'images/big6.jpg',
+        'images/big7.jpg'
     ],
     'kitchen': [
         'images/images_kitchen/1.jpg',
