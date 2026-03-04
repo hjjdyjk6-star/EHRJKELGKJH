@@ -976,150 +976,77 @@ header {
 
 
 
-/* ==================== Social Media & Contact Section ==================== */
+/* الحاوية الكبرى */
 .social-contact-section {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 40px 20px;
+    width: 100%;
+    margin: 40px 0;
+    padding: 10px;
+    direction: rtl; /* لضمان الترتيب من اليمين لليسار */
 }
 
+/* الحاوية التي تجعل العناصر بجانب بعضها */
 .social-contact-container {
-    display: flex;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: row !important;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    gap: 12px; /* المسافة بين المربعات */
+    flex-wrap: nowrap; /* يمنعهم من النزول تحت بعض إلا لو الشاشة ضيقة جداً */
+    width: 100%;
 }
+
+/* تنسيق المربع (الزر) الواحد */
 .social-btn,
 .contact-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75px;
-    height: 75px;
-    background: white;
+    min-width: 80px; /* عرض أدنى للمربع */
+    width: auto;     /* يتمدد مع الأرقام الطويلة */
+    height: 80px;
+    padding: 5px 15px;
+    background: #ffffff;
     border: 2px solid #e8e0d8;
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+/* الأيقونة أو الحرف */
 .social-btn span,
 .contact-btn span {
-    font-size: 28px;
-    margin-bottom: 5px;
+    font-size: 26px;
+    margin-bottom: 4px;
 }
 
+/* النص أو الرقم تحت الأيقونة */
 .social-btn p,
 .contact-btn p {
     margin: 0;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: bold;
     color: #333;
-    text-align: center;
-    line-height: 1.2;
+    white-space: nowrap; /* يمنع الرقم من الإنكسار لسطرين */
 }
 
-/* Facebook */
-.social-btn.facebook {
-    color: #1877f2;
-}
+/* ألوان الهوفر (عند مرور الماوس) */
+.social-btn.facebook:hover { background: #1877f2; color: #fff; border-color: #1877f2; }
+.social-btn.instagram:hover { background: #e4405f; color: #fff; border-color: #e4405f; }
+.social-btn.tiktok:hover { background: #000; color: #fff; border-color: #000; }
+.contact-btn:hover { background: #25d366; color: #fff; border-color: #25d366; }
 
-.social-btn.facebook:hover {
-    background: #1877f2;
-    color: white;
-    border-color: #1877f2;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(24, 119, 242, 0.3);
-}
+.social-btn:hover p, .contact-btn:hover p { color: #fff; }
 
-/* Instagram */
-.social-btn.instagram {
-    color: #e4405f;
-}
-
-.social-btn.instagram:hover {
-    background: linear-gradient(135deg, #e4405f 0%, #fd1d1d 100%);
-    color: white;
-    border-color: #e4405f;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(228, 64, 95, 0.3);
-}
-
-/* TikTok */
-.social-btn.tiktok {
-    color: #000;
-}
-
-.social-btn.tiktok:hover {
-    background: #000;
-    color: white;
-    border-color: #000;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* WhatsApp Contact */
-.contact-btn {
-    color: #25d366;
-}
-
-.contact-btn:hover {
-    background: #25d366;
-    color: white;
-    border-color: #25d366;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-}
-
-.contact-btn:hover p {
-    color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* للموبايل: إذا كانت الشاشة صغيرة جداً يسمح بالنزول لسطر جديد */
+@media (max-width: 600px) {
     .social-contact-container {
-        gap: 12px;
-    }
-
-    .social-btn,
-    .contact-btn {
-        width: 65px;
-        height: 65px;
-    }
-
-    .social-btn span,
-    .contact-btn span {
-        font-size: 24px;
-    }
-
-    .social-btn p,
-    .contact-btn p {
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .social-contact-container {
+        flex-wrap: wrap; 
         gap: 10px;
     }
-
-    .social-btn,
-    .contact-btn {
-        width: 55px;
-        height: 55px;
-    }
-
-    .social-btn span,
-    .contact-btn span {
-        font-size: 20px;
-        margin-bottom: 3px;
-    }
-
-    .social-btn p,
-    .contact-btn p {
-        font-size: 9px;
+    .social-btn, .contact-btn {
+        min-width: 70px;
+        height: 70px;
     }
 }
