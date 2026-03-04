@@ -976,77 +976,76 @@ header {
 
 
 
-/* الحاوية الكبرى */
+/* ==================== Social Media & Contact Section ==================== */
 .social-contact-section {
-    width: 100%;
-    margin: 40px 0;
-    padding: 10px;
-    direction: rtl; /* لضمان الترتيب من اليمين لليسار */
+    width: 100% !important;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: block !important;
 }
 
-/* الحاوية التي تجعل العناصر بجانب بعضها */
 .social-contact-container {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: center;
-    align-items: center;
-    gap: 12px; /* المسافة بين المربعات */
-    flex-wrap: nowrap; /* يمنعهم من النزول تحت بعض إلا لو الشاشة ضيقة جداً */
-    width: 100%;
+    flex-direction: row !important; /* صف أفقي إجباري */
+    flex-wrap: nowrap !important;    /* يمنع النزول لسطر جديد */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
 }
 
-/* تنسيق المربع (الزر) الواحد */
 .social-btn,
 .contact-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 80px; /* عرض أدنى للمربع */
-    width: auto;     /* يتمدد مع الأرقام الطويلة */
-    height: 80px;
-    padding: 5px 15px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 80px; /* عرض مناسب للحروف والأرقام */
+    width: auto !important;
+    height: 80px !important;
     background: #ffffff;
     border: 2px solid #e8e0d8;
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 5px 10px;
 }
 
-/* الأيقونة أو الحرف */
 .social-btn span,
 .contact-btn span {
     font-size: 26px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
-/* النص أو الرقم تحت الأيقونة */
 .social-btn p,
 .contact-btn p {
     margin: 0;
     font-size: 11px;
-    font-weight: bold;
+    font-weight: 700;
     color: #333;
-    white-space: nowrap; /* يمنع الرقم من الإنكسار لسطرين */
+    white-space: nowrap; /* يمنع انقسام النص */
 }
 
-/* ألوان الهوفر (عند مرور الماوس) */
-.social-btn.facebook:hover { background: #1877f2; color: #fff; border-color: #1877f2; }
-.social-btn.instagram:hover { background: #e4405f; color: #fff; border-color: #e4405f; }
-.social-btn.tiktok:hover { background: #000; color: #fff; border-color: #000; }
-.contact-btn:hover { background: #25d366; color: #fff; border-color: #25d366; }
+/* الألوان والتفاعلات */
+.social-btn.facebook { color: #1877f2; }
+.social-btn.instagram { color: #e4405f; }
+.social-btn.tiktok { color: #000000; }
+.contact-btn { color: #25d366; }
 
-.social-btn:hover p, .contact-btn:hover p { color: #fff; }
+.social-btn:hover, .contact-btn:hover {
+    background: #f8f8f8;
+    transform: translateY(-5px);
+}
 
-/* للموبايل: إذا كانت الشاشة صغيرة جداً يسمح بالنزول لسطر جديد */
-@media (max-width: 600px) {
+/* استجابة الموبايل */
+@media (max-width: 480px) {
     .social-contact-container {
-        flex-wrap: wrap; 
-        gap: 10px;
+        gap: 5px !important;
+        flex-wrap: wrap !important; /* يسمح بالنزول في الشاشات الضيقة جداً فقط */
     }
     .social-btn, .contact-btn {
-        min-width: 70px;
+        min-width: 65px;
         height: 70px;
     }
 }
