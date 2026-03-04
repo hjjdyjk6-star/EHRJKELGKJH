@@ -1,73 +1,3 @@
-
-// بيانات الصور لكل فئة - 10 صور لكل فئة
-const categoryImages = {
-    'reception': [
-        'images/reception1.jpg',
-        'images/reception2.jpg',
-        'images/reception3.jpg',
-        'images/reception4.jpg',
-        'images/reception5.jpg',
-        'images/reception6.jpg',
-        'images/reception7.jpg',
-        'images/reception8.jpg',
-        'images/reception9.jpg',
-        'images/reception10.jpg'
-    ],
-    'master-bedroom': [
-        'images/master1.jpg',
-        'images/master2.jpg',
-        'images/master3.jpg',
-        'images/master4.jpg',
-        'images/master5.jpg',
-        'images/master6.jpg',
-        'images/master7.jpg',
-        'images/master8.jpg',
-        'images/master9.jpg',
-        'images/master10.jpg'
-    ],
-    'boys-room': [
-        'images/boy1.jpg',
-        'images/boy2.jpg',
-        'images/boy3.jpg',
-        'images/boy4.jpg',
-        'images/boy5.jpg'
-    ],
-    'girls-room': [
-        'images/girl1.jpg',
-        'images/girl2.jpg',
-        'images/girl3.jpg',
-        'images/girl4.jpg',
-        'images/girl5.jpg
-    ],
-    'small-bathroom': [
-        'images/small1.jpg',
-        'images/small2.jpg',
-        'images/small3.jpg',
-        'images/small4.jpg',
-        'images/small5.jpg',
-        'images/small6.jpg',
-        'images/small7.jpg'
-    ],
-    'large-bathroom': [
-        'images/big1.jpg',
-        'images/big2.jpg',
-        'images/big3.jpg',
-        'images/big4.jpg',
-        'images/big5.jpg'
-    ],
-    'kitchen': [
-        'images/kichin1.jpg',
-        'images/kichin2.jpg',
-        'images/kichin3.jpg',
-        'images/kichin4.jpg',
-        'images/kichin5.jpg',
-        'images/kichin6.jpg',
-        'images/kichin7.jpg',
-        'images/kichin8.jpg',
-        'images/kichin9.jpg'
-    ]
-};
-
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -89,7 +19,6 @@ const formValidation = {
     apartment: (value) => !value ? "حالة الشقة مطلوبة" : null,
     designType: (value) => !value ? "نوع التصميم مطلوب" : null,
     'floor-type': (value) => !value ? "نوع الأرضيات مطلوب" : null,
-    'designs-available': (value) => !value ? "هذا الحقل مطلوب" : null,
     electricity: (value) => !value ? "نظام الكهرباء مطلوب" : null,
     plumbing: (value) => !value ? "نظام السباكة مطلوب" : null,
     'customer-location': (value) => !value ? "مكان إقامة العميل مطلوب" : null,
@@ -229,51 +158,6 @@ function setupFieldValidation() {
     });
 }
 
-// ==================== Display Category Images ====================
-function displayCategoryImages(category) {
-    const gallery = document.getElementById('categoryGallery');
-    gallery.innerHTML = '';
-
-    const images = categoryImages[category] || [];
-
-    images.forEach((imagePath, index) => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-        item.innerHTML = `
-            <div class="gallery-image-wrapper">
-                <img src="${imagePath}" alt="صورة ${index + 1}" loading="lazy">
-                <div class="gallery-overlay">
-                    <button class="gallery-btn" onclick="openImage('${imagePath}')">🔍 عرض</button>
-                </div>
-            </div>
-        `;
-        gallery.appendChild(item);
-    });
-}
-
-// ==================== Open Image Modal ====================
-function openImage(imagePath) {
-    const modal = document.createElement('div');
-    modal.className = 'image-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img src="${imagePath}" alt="صورة مكبرة">
-        </div>
-    `;
-    document.body.appendChild(modal);
-
-    modal.querySelector('.close-modal').addEventListener('click', function() {
-        modal.remove();
-    });
-
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.remove();
-        }
-    });
-}
-
 // ==================== WhatsApp Form Integration ====================
 document.getElementById('surveyForm').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -288,7 +172,6 @@ document.getElementById('surveyForm').addEventListener('submit', async function(
         apartmentState: document.getElementById('apartment').value,
         designType: document.getElementById('designType').value,
         flooring: document.getElementById('floor-type').value,
-        designsAvailable: document.getElementById('designs-available').value,
         electricity: document.getElementById('electricity').value,
         plumbing: document.getElementById('plumbing').value,
         clientLocation: document.getElementById('customer-location').value
@@ -296,7 +179,7 @@ document.getElementById('surveyForm').addEventListener('submit', async function(
 
     // Validate all fields
     let hasErrors = false;
-    const fieldIds = ['name', 'phone', 'location', 'area', 'floor', 'apartment', 'designType', 'floor-type', 'designs-available', 'electricity', 'plumbing', 'customer-location'];
+    const fieldIds = ['name', 'phone', 'location', 'area', 'floor', 'apartment', 'designType', 'floor-type', 'electricity', 'plumbing', 'customer-location'];
     
     fieldIds.forEach(fieldId => {
         const field = document.getElementById(fieldId);
@@ -330,7 +213,6 @@ document.getElementById('surveyForm').addEventListener('submit', async function(
 🏠 *حالة الشقة:* ${formData.apartmentState}
 🎨 *نوع التصميم:* ${formData.designType}
 ⬜ *الأرضية:* ${formData.flooring}
-📋 *التصميمات المتاحة:* ${formData.designsAvailable}
 ⚡ *الكهرباء:* ${formData.electricity}
 💧 *السباكة:* ${formData.plumbing}
 🌍 *مكان الإقامة:* ${formData.clientLocation}`;
@@ -348,6 +230,14 @@ document.getElementById('surveyForm').addEventListener('submit', async function(
         resetForm();
     }, 500);
 });
+
+// ==================== Submit WhatsApp Button ====================
+const submitBtn = document.getElementById('submitWhatsApp');
+if (submitBtn) {
+    submitBtn.addEventListener('click', function() {
+        document.getElementById('surveyForm').dispatchEvent(new Event('submit'));
+    });
+}
 
 // ==================== Form Loading State ====================
 function setSubmitLoading(isLoading) {
@@ -380,28 +270,7 @@ function resetForm() {
     }
 }
 
-// ==================== Category Button Click Handler ====================
-document.addEventListener('DOMContentLoaded', function() {
-    // عرض صور الفئة الأولى افتراضياً
-    displayCategoryImages('reception');
 
-    // إضافة مستمعين لأزرار الفئات
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // إزالة الفئة النشطة من الزراير الأخرى
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // إضافة الفئة النشطة للزر الحالي
-            this.classList.add('active');
-
-            // عرض الصور للفئة المختارة
-            const category = this.getAttribute('data-category');
-            displayCategoryImages(category);
-        });
-    });
-
-    setupFieldValidation();
-});
 
 // ==================== Intersection Observer for Animations ====================
 const observerOptions = {
@@ -430,3 +299,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ==================== Initialize on Page Load ====================
+document.addEventListener('DOMContentLoaded', function() {
+    loadPortfolio();
+    loadTestimonials();
+    setupFieldValidation();
+    
+    // Observe elements when they're created
+    document.querySelectorAll('.portfolio-item, .gallery-item, .testimonial-item').forEach(el => {
+        observer.observe(el);
+    });
+}); 
