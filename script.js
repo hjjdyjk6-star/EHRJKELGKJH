@@ -13,6 +13,18 @@ const categoryImages = {
         'images/reception9.jpg',
         'images/reception10.jpg'
     ],
+     'reception': [
+        'images/reception1.jpg',
+        'images/reception2.jpg',
+        'images/reception3.jpg',
+        'images/reception4.jpg',
+        'images/reception5.jpg',
+        'images/reception6.jpg',
+        'images/reception7.jpg',
+        'images/reception8.jpg',
+        'images/reception9.jpg',
+        'images/reception10.jpg'
+    ],
     'master-bedroom': [
         'images/master1.jpg',
         'images/master2.jpg',
