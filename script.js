@@ -25,28 +25,18 @@ const categoryImages = {
         'images/master10.jpg'
     ],
     'boys-room': [
-        'images/images_boys_room/1.jpg',
-        'images/images_boys_room/2.jpg',
-        'images/images_boys_room/3.jpg',
-        'images/images_boys_room/4.jpg',
-        'images/images_boys_room/5.jpg',
-        'images/images_boys_room/6.jpg',
-        'images/images_boys_room/7.jpg',
-        'images/images_boys_room/8.jpg',
-        'images/images_boys_room/9.jpg',
-        'images/images_boys_room/10.jpg'
+        'images/boy1.jpg',
+        'images/boy2.jpg',
+        'images/boy3.jpg',
+        'images/boy4.jpg',
+        'images/boy5.jpg'
     ],
     'girls-room': [
-        'images/images_girls_room/1.jpg',
-        'images/images_girls_room/2.jpg',
-        'images/images_girls_room/3.jpg',
-        'images/images_girls_room/4.jpg',
-        'images/images_girls_room/5.jpg',
-        'images/images_girls_room/6.jpg',
-        'images/images_girls_room/7.jpg',
-        'images/images_girls_room/8.jpg',
-        'images/images_girls_room/9.jpg',
-        'images/images_girls_room/10.jpg'
+        'images/girl1.jpg',
+        'images/girl2.jpg',
+        'images/girl3.jpg',
+        'images/girl4.jpg',
+        'images/girl5.jpg
     ],
     'small-bathroom': [
         'images/small1.jpg',
@@ -55,31 +45,25 @@ const categoryImages = {
         'images/small4.jpg',
         'images/small5.jpg',
         'images/small6.jpg',
-        'images/small7.jpg',
-        'images/small8.jpg',
-        'images/small9.jpg',
-        'images/small10.jpg'
+        'images/small7.jpg'
     ],
     'large-bathroom': [
         'images/big1.jpg',
         'images/big2.jpg',
         'images/big3.jpg',
         'images/big4.jpg',
-        'images/big5.jpg',
-        'images/big6.jpg',
-        'images/big7.jpg'
+        'images/big5.jpg'
     ],
     'kitchen': [
-        'images/images_kitchen/1.jpg',
-        'images/images_kitchen/2.jpg',
-        'images/images_kitchen/3.jpg',
-        'images/images_kitchen/4.jpg',
-        'images/images_kitchen/5.jpg',
-        'images/images_kitchen/6.jpg',
-        'images/images_kitchen/7.jpg',
-        'images/images_kitchen/8.jpg',
-        'images/images_kitchen/9.jpg',
-        'images/images_kitchen/10.jpg'
+        'images/kichin1.jpg',
+        'images/kichin2.jpg',
+        'images/kichin3.jpg',
+        'images/kichin4.jpg',
+        'images/kichin5.jpg',
+        'images/kichin6.jpg',
+        'images/kichin7.jpg',
+        'images/kichin8.jpg',
+        'images/kichin9.jpg'
     ]
 };
 
