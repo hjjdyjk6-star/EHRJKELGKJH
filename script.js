@@ -334,7 +334,7 @@ document.getElementById('surveyForm').addEventListener('submit', async function(
 🌍 *مكان الإقامة:* ${formData.clientLocation}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/201125933005?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/201121322202?text=${encodedMessage}`;
     
     setSubmitLoading(true);
     showToast('تم استلام طلبك بنجاح! جاري تحويلك إلى واتساب...', 'success');
