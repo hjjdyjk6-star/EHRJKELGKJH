@@ -430,3 +430,81 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+
+
+
+// ==================== Social Media Buttons ==================== 
+document.addEventListener('DOMContentLoaded', function() {
+    // WhatsApp Button
+    const whatsappBtn = document.querySelector('.wrapper .whatsapp');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+            showWhatsAppOptions();
+        });
+    }
+
+    // TikTok Button
+    const tiktokBtn = document.querySelector('.wrapper .tiktok');
+    if (tiktokBtn) {
+        tiktokBtn.addEventListener('click', function() {
+            window.open('https://www.tiktok.com/@yourusername', '_blank');
+        });
+    }
+
+    // Instagram Button
+    const instagramBtn = document.querySelector('.wrapper .instagram');
+    if (instagramBtn) {
+        instagramBtn.addEventListener('click', function() {
+            window.open('https://www.instagram.com/yourusername', '_blank');
+        });
+    }
+});
+
+// ==================== WhatsApp Numbers Selection ====================
+function showWhatsAppOptions() {
+    const modal = document.createElement('div');
+    modal.className = 'whatsapp-modal';
+    modal.innerHTML = `
+        <div class="whatsapp-modal-content">
+            <div class="modal-header">
+                <h3>اختر رقم التواصل</h3>
+                <span class="close-whatsapp-modal">&times;</span>
+            </div>
+            <div class="whatsapp-options">
+                <button class="whatsapp-option" onclick="openWhatsApp('201125933005')">
+                    <span class="whatsapp-icon">📱</span>
+                    <div class="option-info">
+                        <p class="option-title">المايسترو للتصميم</p>
+                        <p class="option-number">201125933005</p>
+                    </div>
+                </button>
+                <button class="whatsapp-option" onclick="openWhatsApp('201000000000')">
+                    <span class="whatsapp-icon">📱</span>
+                    <div class="option-info">
+                        <p class="option-title">فريق المبيعات</p>
+                        <p class="option-number">201000000000</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // إغلاق المودال
+    modal.querySelector('.close-whatsapp-modal').addEventListener('click', function() {
+        modal.remove();
+    });
+    
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+}
+
+function openWhatsApp(phoneNumber) {
+    const whatsappURL = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappURL, '_blank');
+    document.querySelector('.whatsapp-modal').remove();
+}
