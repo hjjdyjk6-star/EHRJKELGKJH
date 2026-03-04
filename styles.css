@@ -981,27 +981,24 @@ header {
     max-width: 1200px;
     margin: 60px auto;
     padding: 40px 20px;
+}
+
+.social-contact-container {
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
+    flex-wrap: wrap;
 }
 
-/* Social Links (على اليمين) */
-.social-links {
-    display: flex;
-    gap: 20px;
-    flex: 1;
-    justify-content: flex-end;
-}
-
-.social-btn {
+.social-btn,
+.contact-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     background: white;
     border: 2px solid #e8e0d8;
     border-radius: 12px;
@@ -1010,16 +1007,20 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.social-btn span {
-    font-size: 32px;
+.social-btn span,
+.contact-btn span {
+    font-size: 28px;
     margin-bottom: 5px;
 }
 
-.social-btn p {
+.social-btn p,
+.contact-btn p {
     margin: 0;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     color: #333;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* Facebook */
@@ -1061,41 +1062,9 @@ header {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Numbers (على الشمال) */
-.contact-numbers {
-    display: flex;
-    gap: 20px;
-    flex: 1;
-    justify-content: flex-start;
-}
-
+/* WhatsApp Contact */
 .contact-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: white;
-    border: 2px solid #e8e0d8;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     color: #25d366;
-}
-
-.contact-btn span {
-    font-size: 32px;
-    margin-bottom: 5px;
-}
-
-.contact-btn p {
-    margin: 0;
-    font-size: 11px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
 }
 
 .contact-btn:hover {
@@ -1112,54 +1081,46 @@ header {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .social-contact-section {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .social-links,
-    .contact-numbers {
-        justify-content: center;
-        width: 100%;
+    .social-contact-container {
+        gap: 12px;
     }
 
     .social-btn,
     .contact-btn {
-        width: 70px;
-        height: 70px;
-    }
-
-    .social-btn span,
-    .contact-btn span {
-        font-size: 28px;
-    }
-
-    .social-btn p,
-    .contact-btn p {
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    .social-contact-section {
-        padding: 30px 15px;
-        gap: 20px;
-    }
-
-    .social-btn,
-    .contact-btn {
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
     }
 
     .social-btn span,
     .contact-btn span {
         font-size: 24px;
-        margin-bottom: 3px;
     }
 
     .social-btn p,
     .contact-btn p {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-contact-container {
+        gap: 10px;
+    }
+
+    .social-btn,
+    .contact-btn {
+        width: 55px;
+        height: 55px;
+    }
+
+    .social-btn span,
+    .contact-btn span {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+
+    .social-btn p,
+    .contact-btn p {
+        font-size: 9px;
     }
 }
