@@ -37,7 +37,7 @@ const categoryImages = {
         'images/girl2.jpg',
         'images/girl3.jpg',
         'images/girl4.jpg',
-        'images/girl5.jpg
+        'images/girl5.jpg'
     ],
     'small-bathroom': [
         'images/small1.jpg',
