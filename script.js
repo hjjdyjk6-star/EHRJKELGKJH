@@ -21,9 +21,7 @@ const categoryImages = {
         'images/master5.jpg',
         'images/master6.jpg',
         'images/master7.jpg',
-        'images/master8.jpg',
-        'images/master9.jpg',
-        'images/master10.jpg'
+        'images/master8.jpg'
     ],
     'boys-room': [
         'images/boy1.jpg',
