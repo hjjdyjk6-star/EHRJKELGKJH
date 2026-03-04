@@ -969,38 +969,3 @@ header {
 
 
 
-/* WhatsApp Style */
-.wrapper .whatsapp {
-  color: white;
-  background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
-}
-
-.wrapper .whatsapp.active {
-  background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
-  color: white;
-  transform: scale(1.05);
-}
-
-/* TikTok Style */
-.wrapper .tiktok {
-  color: white;
-  background: linear-gradient(135deg, #000000 0%, #333333 100%);
-}
-
-.wrapper .tiktok.active {
-  background: linear-gradient(135deg, #000000 0%, #333333 100%);
-  color: white;
-  transform: scale(1.05);
-}
-
-/* Instagram Style */
-.wrapper .instagram {
-  color: white;
-  background: linear-gradient(135deg, #e4405f 0%, #fd1d1d 100%);
-}
-
-.wrapper .instagram.active {
-  background: linear-gradient(135deg, #e4405f 0%, #fd1d1d 100%);
-  color: white;
-  transform: scale(1.05);
-}
