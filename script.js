@@ -13,17 +13,17 @@ const categoryImages = {
         'images/reception9.jpg',
         'images/reception10.jpg'
     ],
-     'reception': [
-        'images/reception1.jpg',
-        'images/reception2.jpg',
-        'images/reception3.jpg',
-        'images/reception4.jpg',
-        'images/reception5.jpg',
-        'images/reception6.jpg',
-        'images/reception7.jpg',
-        'images/reception8.jpg',
-        'images/reception9.jpg',
-        'images/reception10.jpg'
+     'fela': [
+        'images/fela1.jpg',
+        'images/fela2.jpg',
+        'images/fela3.jpg',
+        'images/fela4.jpg',
+        'images/fela5.jpg',
+        'images/fela6.jpg',
+        'images/fela7.jpg',
+        'images/fela8.jpg',
+        'images/fela9.jpg',
+        'images/fela10.jpg'
     ],
     'master-bedroom': [
         'images/master1.jpg',
