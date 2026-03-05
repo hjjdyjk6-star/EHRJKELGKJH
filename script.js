@@ -27,7 +27,7 @@ const categoryImages = {
         'images/reception23.jpg',
         'images/reception24.jpg'
     ],
-     'fela k': [
+     'fela-k': [
         'images/fela1.jpg',
         'images/fela2.jpg',
         'images/fela3.jpg',
@@ -39,7 +39,7 @@ const categoryImages = {
         'images/fela9.jpg',
         'images/fela10.jpg'
     ],
-     'fela 3': [
+     'fela_3': [
         'images/felaa1.jpg',
         'images/felaa2.jpg',
         'images/felaa3.jpg',
