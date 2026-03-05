@@ -71,7 +71,7 @@ const formValidation = {
         return null;
     },
     phone: (value) => {
-        if (!value) return "رقم الهات�� مطلوب";
+        if (!value) return "رقم الهاتف مطلوب";
         if (!/^[0-9\s\-\+\(\)]{10,}$/.test(value)) return "رقم الهاتف غير صحيح";
         return null;
     },
@@ -240,3 +240,270 @@ function displayCategoryImages(category) {
 
 // ==================== Open Image Modal ====================
 function openImage(imagePath) {
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="${imagePath}" alt="صورة مكبرة">
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.querySelector('.close-modal').addEventListener('click', function() {
+        modal.remove();
+    });
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+}
+
+// ==================== WhatsApp Form Integration ====================
+document.getElementById('surveyForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = {
+        clientName: document.getElementById('name').value,
+        phoneNumber: document.getElementById('phone').value,
+        locationType: document.getElementById('location').value,
+        area: document.getElementById('area').value,
+        floor: document.getElementById('floor').value,
+        apartmentState: document.getElementById('apartment').value,
+        designType: document.getElementById('designType').value,
+        flooring: document.getElementById('floor-type').value,
+        designsAvailable: document.getElementById('designs-available').value,
+        electricity: document.getElementById('electricity').value,
+        plumbing: document.getElementById('plumbing').value,
+        clientLocation: document.getElementById('customer-location').value
+    };
+
+    let hasErrors = false;
+    const fieldIds = ['name', 'phone', 'location', 'area', 'floor', 'apartment', 'designType', 'floor-type', 'designs-available', 'electricity', 'plumbing', 'customer-location'];
+    
+    fieldIds.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (!field) return;
+        
+        const fieldValue = field.value;
+        if (formValidation[fieldId]) {
+            const error = formValidation[fieldId](fieldValue);
+            if (error) {
+                showFieldError(fieldId, error);
+                hasErrors = true;
+            } else {
+                showFieldError(fieldId, null);
+            }
+        }
+    });
+
+    if (hasErrors) {
+        showToast('يرجى تصحيح الأخطاء المشار إليها', 'error');
+        return;
+    }
+
+    const message = `*طلب تسعير / تشطيب جديد* 🏗️✨
+
+👤 *الاسم:* ${formData.clientName}
+📱 *رقم الهاتف:* ${formData.phoneNumber}
+🏢 *المكان:* ${formData.locationType}
+🗺️ *المنطقة:* ${formData.area}
+🔢 *الدور:* ${formData.floor}
+🏠 *حالة الشقة:* ${formData.apartmentState}
+🎨 *نوع التصميم:* ${formData.designType}
+⬜ *الأرضية:* ${formData.flooring}
+📋 *التصميمات المتاحة:* ${formData.designsAvailable}
+⚡ *الكهرباء:* ${formData.electricity}
+💧 *السباكة:* ${formData.plumbing}
+🌍 *مكان الإقامة:* ${formData.clientLocation}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/201121322202?text=${encodedMessage}`;
+    
+    setSubmitLoading(true);
+    showToast('تم استلام طلبك بنجاح! جاري تحويلك إلى واتساب...', 'success');
+
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+        setSubmitLoading(false);
+        resetForm();
+    }, 500);
+});
+
+// ==================== Form Loading State ====================
+function setSubmitLoading(isLoading) {
+    const submitBtn = document.querySelector('.submit-btn');
+    if (!submitBtn) return;
+
+    if (isLoading) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <span class="animate-spin">⏳</span>
+            جاري الإرسال...
+        `;
+    } else {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `📱 إرسال عبر واتساب`;
+    }
+}
+
+// ==================== Form Reset ====================
+function resetForm() {
+    const form = document.getElementById('surveyForm');
+    if (form) {
+        form.reset();
+        document.querySelectorAll('.form-error').forEach(el => el.remove());
+        document.querySelectorAll('.form-group input, .form-group select').forEach(field => {
+            field.style.borderColor = 'var(--border)';
+            field.style.boxShadow = '';
+        });
+    }
+}
+
+// ==================== Category Button Click Handler ====================
+document.addEventListener('DOMContentLoaded', function() {
+    displayCategoryImages('reception');
+
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const category = this.getAttribute('data-category');
+            displayCategoryImages(category);
+        });
+    });
+
+    setupFieldValidation();
+});
+
+// ==================== Intersection Observer for Animations ====================
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+        }
+    });
+}, observerOptions);
+
+// ==================== Smooth Scroll Navigation ====================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ==================== Social Media Buttons ==================== 
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappBtn = document.querySelector('.wrapper .whatsapp');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+            showWhatsAppOptions();
+        });
+    }
+
+    const tiktokBtn = document.querySelector('.wrapper .tiktok');
+    if (tiktokBtn) {
+        tiktokBtn.addEventListener('click', function() {
+            window.open('https://www.tiktok.com/@yourusername', '_blank');
+        });
+    }
+
+    const instagramBtn = document.querySelector('.wrapper .instagram');
+    if (instagramBtn) {
+        instagramBtn.addEventListener('click', function() {
+            window.open('https://www.instagram.com/yourusername', '_blank');
+        });
+    }
+});
+
+// ==================== WhatsApp Numbers Selection ====================
+function showWhatsAppOptions() {
+    const modal = document.createElement('div');
+    modal.className = 'whatsapp-modal';
+    modal.innerHTML = `
+        <div class="whatsapp-modal-content">
+            <div class="modal-header">
+                <h3>اختر رقم التواصل</h3>
+                <span class="close-whatsapp-modal">&times;</span>
+            </div>
+            <div class="whatsapp-options">
+                <button class="whatsapp-option" onclick="openWhatsApp('201125933005')">
+                    <span class="whatsapp-icon">📱</span>
+                    <div class="option-info">
+                        <p class="option-title">المايسترو للتصميم</p>
+                        <p class="option-number">201125933005</p>
+                    </div>
+                </button>
+                <button class="whatsapp-option" onclick="openWhatsApp('201000000000')">
+                    <span class="whatsapp-icon">📱</span>
+                    <div class="option-info">
+                        <p class="option-title">فريق المبيعات</p>
+                        <p class="option-number">201000000000</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    modal.querySelector('.close-whatsapp-modal').addEventListener('click', function() {
+        modal.remove();
+    });
+    
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+}
+
+function openWhatsApp(phoneNumber) {
+    const whatsappURL = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappURL, '_blank');
+    document.querySelector('.whatsapp-modal').remove();
+}
+
+// ==================== SCROLL TO SURVEY BUTTON ==================== 
+window.addEventListener('scroll', function() {
+    const scrollToSurveyBtn = document.getElementById('scrollToSurveyBtn');
+    
+    if (!scrollToSurveyBtn) return;
+    
+    if (window.scrollY > 300) {
+        scrollToSurveyBtn.classList.add('show');
+    } else {
+        scrollToSurveyBtn.classList.remove('show');
+    }
+});
+
+// Click handler for scroll to survey button
+const scrollToSurveyBtn = document.getElementById('scrollToSurveyBtn');
+if (scrollToSurveyBtn) {
+    scrollToSurveyBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const surveySection = document.getElementById('survey');
+        if (surveySection) {
+            surveySection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+}
