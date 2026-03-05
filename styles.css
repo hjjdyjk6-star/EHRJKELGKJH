@@ -1057,6 +1057,38 @@ header {
 
 
 
-
-
+/* زر العودة للأعلى */
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  left: 40px; /* اليسار بدلاً من اليمين لأن الموقع بالعربية */
+  width: 50px;
+  height: 50px;
+  background-color: #d4af37; /* لون ذهبي */
+  border-radius: 50%; /* جعل الزر مدوراً */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
+
+.scroll-to-top::before {
+  content: '↑'; /* رمز السهم */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.scroll-to-top:hover {
+  background-color: #f4c430; /* لون ذهبي فاتح عند التمرير */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top.show {
+  display: flex;
+}
+
