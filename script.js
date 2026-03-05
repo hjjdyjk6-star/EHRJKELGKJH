@@ -21,9 +21,17 @@ const categoryImages = {
         'images/Screenshot17.jpg', 'images/Screenshot18.jpg', 'images/Screenshot19.jpg'
     ],
     'garden': [
-        'images/garden1.jpg', 'images/garden2.jpg', 'images/garden3.jpg', 'images/garden4.jpg',
-        'images/garden5.jpg', 'images/garden6.jpg', 'images/garden7.jpg', 'images/garden8.jpg',
-        'images/garden9.jpg', 'images/garden10.jpg', 'images/garden11.jpg'
+        'images/garden1.jpg',
+        'images/garden2.jpg',
+        'images/garden3.jpg',
+        'images/garden4.jpg',
+        'images/garden5.jpg',
+        'images/garden6.jpg',
+        'images/garden7.jpg',
+        'images/garden8.jpg',
+        'images/garden9.jpg',
+        'images/garden10.jpg',
+        'images/garden11.jpg'
     ],
     'master-bedroom': [
         'images/master1.jpg', 'images/master2.jpg', 'images/master3.jpg', 'images/master4.jpg',
@@ -47,9 +55,17 @@ const categoryImages = {
         'images/small9.jpg'
     ],
     'large-bathroom': [
-        'images/big1.jpg', 'images/big2.jpg', 'images/big3.jpg', 'images/big4.jpg',
-        'images/big5.jpg', 'images/big6.jpg', 'images/big7.jpg', 'images/big8.jpg',
-        'images/big9.jpg', 'images/big10.jpg', 'images/big11.jpg'
+        'images/big1.jpg',
+        'images/big2.jpg',
+        'images/big3.jpg',
+        'images/big4.jpg',
+        'images/big5.jpg',
+        'images/big6.jpg',
+        'images/big7.jpg', 
+        'images/big8.jpg',
+        'images/big9.jpg',
+        'images/big10.jpg',
+        'images/big11.jpg'
     ],
     'kitchen': [
         'images/kichin1.jpg', 'images/kichin2.jpg', 'images/kichin3.jpg', 'images/kichin4.jpg',
