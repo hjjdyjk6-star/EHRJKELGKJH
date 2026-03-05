@@ -620,7 +620,7 @@ function openWhatsApp(phoneNumber) {
 
 
 
-// إظهار/إخفاء زر العودة للأعلى
+// إظهار/إخفاء زر العودة للاستبيان
 window.addEventListener('scroll', function() {
   const scrollToTopBtn = document.querySelector('.scroll-to-top');
   
@@ -631,13 +631,16 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// العودة للأعلى بسلاسة عند الضغط
+// الذهاب للاستبيان عند الضغط
 document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
   e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  const surveySection = document.querySelector('.survey-section');
+  if (surveySection) {
+    surveySection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
 });
 
 
