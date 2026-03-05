@@ -9,9 +9,9 @@ const categoryImages = {
         'images/reception21.jpg', 'images/reception22.jpg', 'images/reception23.jpg', 'images/reception24.jpg'
     ],
     'fela-k': [
-        'images/fela1.jpg', 'images/fela2.jpg', 'images/fela3.jpg', 'images/fela4.jpg',
-        'images/fela5.jpg', 'images/fela6.jpg', 'images/fela7.jpg', 'images/fela8.jpg',
-        'images/fela9.jpg', 'images/fela10.jpg'
+        'images/oqto1.jpg', 'images/oqto2.jpg', 'images/oqto3.jpg', 'images/oqto4.jpg',
+        'images/oqto5.jpg', 'images/oqto6.jpg', 'images/oqto7.jpg', 'images/oqto8.jpg',
+        'images/oqto9.jpg', 'images/oqto10.jpg', 'images/11.jpg'
     ],
     'fela_3': [
         'images/Screenshot1.jpg', 'images/Screenshot2.jpg', 'images/Screenshot3.jpg', 'images/Screenshot4.jpg',
