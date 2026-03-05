@@ -60,6 +60,21 @@ const categoryImages = {
         'images/Screenshot18.jpg',
         'images/Screenshot19.jpg'
     ],
+
+'garden': [
+        'images/garden1.jpg',
+        'images/garden2.jpg',
+        'images/garden3.jpg',
+        'images/garden4.jpg',
+        'images/garden5.jpg',
+        'images/garden6.jpg',
+        'images/garden7.jpg',
+        'images/garden8.jpg',
+        'images/garden9.jpg',
+        'images/garden10.jpg',
+        'images/garden11.jpg'
+    ],
+
     'master-bedroom': [
         'images/master1.jpg',
         'images/master2.jpg',
