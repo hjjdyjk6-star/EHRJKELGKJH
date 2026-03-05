@@ -775,14 +775,13 @@ header {
 }
 
 /* ==================== Hero with Images ==================== */
-/* ==================== Hero with Images ==================== */
 .hero-with-images {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin-bottom: 2rem;
-    flex-wrap: wrap;  /* ✅ تغير من nowrap إلى wrap */
+    flex-wrap: wrap;
 }
 
 .hero-image {
@@ -825,7 +824,6 @@ header {
     font-size: 2rem;
 }
 
-/* ✅ إضافة Responsive للشاشات الصغيرة */
 @media (max-width: 768px) {
     .hero-with-images {
         flex-direction: column;
@@ -839,7 +837,7 @@ header {
 
     .rectangle-image {
         width: 200px;
-        height: 280px;  /* ✅ أقل من 400px للشاشات الصغيرة */
+        height: 280px;
     }
 
     .hero-text-wrapper .hero-title {
@@ -862,6 +860,7 @@ header {
         font-size: 1.25rem;
     }
 }
+
 /* ==================== Responsive ==================== */
 @media (max-width: 768px) {
     .form-grid {
@@ -905,21 +904,6 @@ header {
 
     .category-gallery {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-
-    .hero-with-images {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .square-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .rectangle-image {
-        width: 200px;
-        height: 250px;
     }
 }
 
@@ -965,16 +949,8 @@ header {
 
 .px-6 {
     padding-left: 1.5rem;
-    padding-right: 1.
-
-
-
-
-
-
-
-
-
+    padding-right: 1.5rem;
+}
 
 /* ==================== Social Media & Contact Section ==================== */
 .social-contact-section {
@@ -987,8 +963,8 @@ header {
 
 .social-contact-container {
     display: flex !important;
-    flex-direction: row !important; /* صف أفقي إجباري */
-    flex-wrap: nowrap !important;    /* يمنع النزول لسطر جديد */
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 10px !important;
@@ -1001,7 +977,7 @@ header {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    min-width: 80px; /* عرض مناسب للحروف والأرقام */
+    min-width: 80px;
     width: auto !important;
     height: 80px !important;
     background: #ffffff;
@@ -1024,10 +1000,9 @@ header {
     font-size: 11px;
     font-weight: 700;
     color: #333;
-    white-space: nowrap; /* يمنع انقسام النص */
+    white-space: nowrap;
 }
 
-/* الألوان والتفاعلات */
 .social-btn.facebook { color: #1877f2; }
 .social-btn.instagram { color: #e4405f; }
 .social-btn.tiktok { color: #000000; }
@@ -1038,11 +1013,10 @@ header {
     transform: translateY(-5px);
 }
 
-/* استجابة الموبايل */
 @media (max-width: 480px) {
     .social-contact-container {
         gap: 5px !important;
-        flex-wrap: wrap !important; /* يسمح بالنزول في الشاشات الضيقة جداً فقط */
+        flex-wrap: wrap !important;
     }
     .social-btn, .contact-btn {
         min-width: 65px;
@@ -1050,45 +1024,47 @@ header {
     }
 }
 
-
-
-
-
-
-
-
-/* زر العودة للأعلى */
-.scroll-to-top {
-  position: fixed;
-  bottom: 40px;
-  left: 40px; /* اليسار بدلاً من اليمين لأن الموقع بالعربية */
-  width: 50px;
-  height: 50px;
-  background-color: #d4af37; /* لون ذهبي */
-  border-radius: 50%; /* جعل الزر مدوراً */
-  display: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
+/* ==================== Scroll to Survey Button ==================== */
+.scroll-to-survey {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #d4af37;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    padding: 0;
+    line-height: 1.3;
+    text-align: center;
 }
 
-.scroll-to-top::before {
-  content: '↑'; /* رمز السهم */
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
+.scroll-to-survey::before {
+    content: 'استبيان';
+    display: block;
 }
 
-.scroll-to-top:hover {
-  background-color: #f4c430; /* لون ذهبي فاتح عند التمرير */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.scroll-to-survey:hover {
+    background-color: #f4c430;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
-.scroll-to-top.show {
-  display: flex;
+.scroll-to-survey.show {
+    display: flex;
 }
 
+.scroll-to-survey:active {
+    transform: scale(0.95);
+}
