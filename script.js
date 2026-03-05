@@ -11,7 +11,7 @@ const categoryImages = {
     'fela-k': [
         'images/oqto1.jpg', 'images/oqto2.jpg', 'images/oqto3.jpg', 'images/oqto4.jpg',
         'images/oqto5.jpg', 'images/oqto6.jpg', 'images/oqto7.jpg', 'images/oqto8.jpg',
-        'images/oqto9.jpg', 'images/oqto10.jpg', 'images/11.jpg'
+        'images/oqto9.jpg', 'images/oqto10.jpg'
     ],
     'fela_3': [
         'images/Screenshot1.jpg', 'images/Screenshot2.jpg', 'images/Screenshot3.jpg', 'images/Screenshot4.jpg',
