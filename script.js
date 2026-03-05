@@ -11,9 +11,23 @@ const categoryImages = {
         'images/reception7.jpg',
         'images/reception8.jpg',
         'images/reception9.jpg',
-        'images/reception10.jpg'
+        'images/reception10.jpg',
+        'images/reception11.jpg',
+        'images/reception12.jpg',
+        'images/reception13.jpg',
+        'images/reception14.jpg',
+        'images/reception15.jpg',
+        'images/reception16.jpg',
+        'images/reception17.jpg',
+        'images/reception18.jpg',
+        'images/reception19.jpg',
+        'images/reception20.jpg',
+        'images/reception21.jpg',
+        'images/reception22.jpg',
+        'images/reception23.jpg',
+        'images/reception24.jpg'
     ],
-     'fela': [
+     'fela k': [
         'images/fela1.jpg',
         'images/fela2.jpg',
         'images/fela3.jpg',
@@ -25,6 +39,18 @@ const categoryImages = {
         'images/fela9.jpg',
         'images/fela10.jpg'
     ],
+     'fela 3': [
+        'images/felaa1.jpg',
+        'images/felaa2.jpg',
+        'images/felaa3.jpg',
+        'images/felaa4.jpg',
+        'images/felaa5.jpg',
+        'images/felaa6.jpg',
+        'images/felaa7.jpg',
+        'images/felaa8.jpg',
+        'images/felaa9.jpg',
+        'images/felaa10.jpg'
+    ],
     'master-bedroom': [
         'images/master1.jpg',
         'images/master2.jpg',
@@ -32,21 +58,41 @@ const categoryImages = {
         'images/master4.jpg',
         'images/master5.jpg',
         'images/master6.jpg',
-        'images/master7.jpg'
+        'images/master7.jpg',
+        'images/master8.jpg',
+        'images/master9.jpg',
+        'images/master10.jpg',
+        'images/master11.jpg',
+        'images/master12.jpg',
+        'images/master13.jpg',
+        'images/master14.jpg',
+        'images/master15.jpg',
+        'images/master16.jpg',
+        'images/master17.jpg',
+        'images/master18.jpg',
+        'images/master19.jpg',
+        'images/master20.jpg'
     ],
     'boys-room': [
         'images/boy1.jpg',
         'images/boy2.jpg',
         'images/boy3.jpg',
         'images/boy4.jpg',
-        'images/boy5.jpg'
+        'images/boy5.jpg',
+        'images/boy6.jpg',
+        'images/boy7.jpg',
+        'images/boy8.jpg',
+        'images/boy9.jpg',
+        'images/boy10.jpg'
     ],
     'girls-room': [
         'images/girl1.jpg',
         'images/girl2.jpg',
         'images/girl3.jpg',
         'images/girl4.jpg',
-        'images/girl5.jpg'
+        'images/girl5.jpg',
+        'images/girl6.jpg',
+        'images/girl7.jpg'
     ],
     'small-bathroom': [
         'images/small1.jpg',
@@ -55,14 +101,22 @@ const categoryImages = {
         'images/small4.jpg',
         'images/small5.jpg',
         'images/small6.jpg',
-        'images/small7.jpg'
+        'images/small7.jpg',
+        'images/small8.jpg',
+        'images/small9.jpg'
     ],
     'large-bathroom': [
         'images/big1.jpg',
         'images/big2.jpg',
         'images/big3.jpg',
         'images/big4.jpg',
-        'images/big5.jpg'
+        'images/big5.jpg', 
+        'images/big6.jpg',
+        'images/big7.jpg',
+        'images/big8.jpg',
+        'images/big9.jpg',
+        'images/big10.jpg',
+        'images/big11.jpg'
     ],
     'kitchen': [
         'images/kichin1.jpg',
@@ -73,7 +127,15 @@ const categoryImages = {
         'images/kichin6.jpg',
         'images/kichin7.jpg',
         'images/kichin8.jpg',
-        'images/kichin9.jpg'
+        'images/kichin9.jpg',
+        'images/kichin10.jpg',
+        'images/kichin11.jpg',
+        'images/kichin12.jpg',
+        'images/kichin13.jpg',
+        'images/kichin14.jpg',
+        'images/kichin15.jpg',
+        'images/kichin16.jpg',
+        'images/kichin17.jpg'
     ]
 };
 
